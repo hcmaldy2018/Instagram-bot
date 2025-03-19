@@ -1,0 +1,206 @@
+2025-03-18 18:06:51,093 - INFO - Log file created: bot_log.txt
+2025-03-18 18:06:51,093 - INFO - Starting bot with username: admin@romerolocksley.com
+2025-03-18 18:06:51,093 - INFO - Initializing browser...
+2025-03-18 18:06:52,986 - INFO - Browser initialized successfully.
+2025-03-18 18:06:56,280 - INFO - Navigated to Instagram, waiting for page load...
+2025-03-18 18:07:03,296 - INFO - Attempting to log in...
+2025-03-18 18:07:03,556 - INFO - Entered username
+2025-03-18 18:07:03,741 - INFO - Entered password
+2025-03-18 18:07:03,796 - INFO - Login attempt submitted, waiting for response...
+2025-03-18 18:07:19,009 - INFO - No Save Login Info page found or already handled
+2025-03-18 18:07:21,304 - INFO - Clicked top-left corner to dismiss Meta popup
+2025-03-18 18:07:23,572 - INFO - Performing initial scroll to load posts...
+2025-03-18 18:07:30,624 - INFO - Successfully reached Instagram feed!
+2025-03-18 18:07:30,624 - INFO - Starting to process posts...
+2025-03-18 18:07:32,705 - INFO - Processing post URL: https://www.instagram.com/p/DHWBzaNSp-6/
+2025-03-18 18:07:33,919 - INFO - Clicked 'more' button to reveal full caption
+2025-03-18 18:07:35,950 - INFO - Scraped caption: 'Fresh New Finds at the Fredericksburg Food Coop!
+
+We’ve just stocked up on some exciting new products you’ll love:
+👉 Wildvine Banh Mi Medley – Vietnamese Spiced Pickled Veggies $6.99
+👉 Nut Puds Almond + Coconut Coffee Cake Creamer – Dairy-Free & Unsweetened $5.99
+👉 Lifeway Organic Low Fat Plain Kefir – Refreshing & Probiotic-Rich $5.99
+👉 Little Sesame Green Goddess Hummus – Seasonal & Flavorful $5.79
+
+Come in today and try these delicious additions before they’re gone!'
+2025-03-18 18:07:37,009 - INFO - Generated Gemini comment: Love these new additions! 
+2025-03-18 18:07:37,096 - INFO - Post liked successfully
+2025-03-18 18:07:40,251 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF62967DF85+26693]
+	(No symbol) [0x00007FF6295DEAD0]
+	(No symbol) [0x00007FF6294691CA]
+	(No symbol) [0x00007FF629470B2C]
+	(No symbol) [0x00007FF6294738FC]
+	(No symbol) [0x00007FF6294739CF]
+	(No symbol) [0x00007FF6294B9065]
+	(No symbol) [0x00007FF6294B707C]
+	(No symbol) [0x00007FF6294E78EA]
+	(No symbol) [0x00007FF6294B2096]
+	(No symbol) [0x00007FF6294E7B00]
+	(No symbol) [0x00007FF6295100B8]
+	(No symbol) [0x00007FF6294E76C3]
+	(No symbol) [0x00007FF6294B0490]
+	(No symbol) [0x00007FF6294B1743]
+	GetHandleVerifier [0x00007FF6299D436D+3525677]
+	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
+	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
+	GetHandleVerifier [0x00007FF629747C0A+853194]
+	(No symbol) [0x00007FF6295E990F]
+	(No symbol) [0x00007FF6295E5674]
+	(No symbol) [0x00007FF6295E5816]
+	(No symbol) [0x00007FF6295D4D89]
+	BaseThreadInitThunk [0x00007FFCB2907374+20]
+	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+
+2025-03-18 18:07:51,326 - INFO - Comment posted successfully: Love these new additions! 
+2025-03-18 18:07:51,326 - INFO - Successfully processed post 1/4
+2025-03-18 18:07:55,419 - INFO - Processing post URL: https://www.instagram.com/p/DHVyxMbxZk4/
+2025-03-18 18:07:56,574 - INFO - Clicked 'more' button to reveal full caption
+2025-03-18 18:07:58,629 - INFO - Scraped caption: 'To help our residents celebrate National Wear a Hat Day we are holding an in-person raffle where we’ll be giving away two @fxbgnats hats!
+
+If interested in joining in on the fun and supporting our neighborhood baseball team during the 2025 season, stop by the Club House to fill out a sign-up slip and drop it in the box provided! Our winners will be announced on Tuesday, March 25th!
+
+Please note, one entry per person.
+
+#SilverLifeStyle #SilverCollection #LuxuryLiving #LuxuryApartments #LoveWhereYouLive #LoveWhereYouWork #LoveWhereYouPlay #WeLoveOurResidents #ResidentEvents #ResidentEvent #fxbg #fxbgchamber #goodnewsfxbg #silverlining #residentraffle #smallbusiness'
+2025-03-18 18:07:59,356 - INFO - Generated Gemini comment: Love this idea! 
+2025-03-18 18:07:59,436 - INFO - Post liked successfully
+2025-03-18 18:08:02,607 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF62967DF85+26693]
+	(No symbol) [0x00007FF6295DEAD0]
+	(No symbol) [0x00007FF6294691CA]
+	(No symbol) [0x00007FF629470B2C]
+	(No symbol) [0x00007FF6294738FC]
+	(No symbol) [0x00007FF6294739CF]
+	(No symbol) [0x00007FF6294B9065]
+	(No symbol) [0x00007FF6294B707C]
+	(No symbol) [0x00007FF6294E78EA]
+	(No symbol) [0x00007FF6294B2096]
+	(No symbol) [0x00007FF6294E7B00]
+	(No symbol) [0x00007FF6295100B8]
+	(No symbol) [0x00007FF6294E76C3]
+	(No symbol) [0x00007FF6294B0490]
+	(No symbol) [0x00007FF6294B1743]
+	GetHandleVerifier [0x00007FF6299D436D+3525677]
+	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
+	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
+	GetHandleVerifier [0x00007FF629747C0A+853194]
+	(No symbol) [0x00007FF6295E990F]
+	(No symbol) [0x00007FF6295E5674]
+	(No symbol) [0x00007FF6295E5816]
+	(No symbol) [0x00007FF6295D4D89]
+	BaseThreadInitThunk [0x00007FFCB2907374+20]
+	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+
+2025-03-18 18:08:12,185 - INFO - Comment posted successfully: Love this idea! 
+2025-03-18 18:08:12,185 - INFO - Successfully processed post 2/4
+2025-03-18 18:08:16,297 - INFO - Found sponsored post (Sponsored text under account name)
+2025-03-18 18:08:16,297 - INFO - Skipping sponsored post
+2025-03-18 18:08:16,297 - INFO - Skipped or failed to process post 3
+2025-03-18 18:08:20,418 - INFO - Processing post URL: https://www.instagram.com/p/DHEswKBxaVa/
+2025-03-18 18:08:21,576 - INFO - Clicked 'more' button to reveal full caption
+2025-03-18 18:08:23,631 - INFO - Scraped caption: '💼 Smart business owners and entrepreneurs know that success isn't about doing everything – it's about focusing on what matters most.
+
+When it comes to accounting and bookkeeping, you can trust us to handle the details while you focus on growing your business. ✅ What tasks are you ready to delegate?
+
+📊 We're here to help—virtually and in person. Contact us today!
+
+#PatriotsTaxAccounting #PatriotsTaxBookkeeping #Tax #TaxPros #TaxExperts #TaxPlanning #TaxTips #TaxSeason #Accounting #AccountingServices #AccountingSolutions #Bookkeeping #BookkeepingServices #Bookkeeper #SmallBusiness #SmallBusinesses #SmallBusinessSupport #TrustedAdvisors #FredericksburgVA #Virginia #VA #Fredericksburg #FXBG #FXBGVA #Katy #KatyTX #Texas'
+2025-03-18 18:08:24,306 - INFO - Generated Gemini comment: Great advice! 
+2025-03-18 18:08:24,440 - INFO - Post liked successfully
+2025-03-18 18:08:27,614 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF62967DF85+26693]
+	(No symbol) [0x00007FF6295DEAD0]
+	(No symbol) [0x00007FF6294691CA]
+	(No symbol) [0x00007FF629470B2C]
+	(No symbol) [0x00007FF6294738FC]
+	(No symbol) [0x00007FF6294739CF]
+	(No symbol) [0x00007FF6294B9065]
+	(No symbol) [0x00007FF6294B707C]
+	(No symbol) [0x00007FF6294E78EA]
+	(No symbol) [0x00007FF6294B2096]
+	(No symbol) [0x00007FF6294E7B00]
+	(No symbol) [0x00007FF6295100B8]
+	(No symbol) [0x00007FF6294E76C3]
+	(No symbol) [0x00007FF6294B0490]
+	(No symbol) [0x00007FF6294B1743]
+	GetHandleVerifier [0x00007FF6299D436D+3525677]
+	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
+	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
+	GetHandleVerifier [0x00007FF629747C0A+853194]
+	(No symbol) [0x00007FF6295E990F]
+	(No symbol) [0x00007FF6295E5674]
+	(No symbol) [0x00007FF6295E5816]
+	(No symbol) [0x00007FF6295D4D89]
+	BaseThreadInitThunk [0x00007FFCB2907374+20]
+	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+
+2025-03-18 18:08:36,638 - INFO - Comment posted successfully: Great advice! 
+2025-03-18 18:08:36,638 - INFO - Successfully processed post 3/4
+2025-03-18 18:08:40,805 - INFO - Processing post URL: https://www.instagram.com/p/DHGTppxzgm_/
+2025-03-18 18:08:46,074 - INFO - No 'more' button found or not clickable: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62967DF85+26693]
+	(No symbol) [0x00007FF6295DEAD0]
+	(No symbol) [0x00007FF6294691CA]
+	(No symbol) [0x00007FF6294BF747]
+	(No symbol) [0x00007FF6294BF97C]
+	(No symbol) [0x00007FF6295133C7]
+	(No symbol) [0x00007FF6294E792F]
+	(No symbol) [0x00007FF6295100B8]
+	(No symbol) [0x00007FF6294E76C3]
+	(No symbol) [0x00007FF6294B0490]
+	(No symbol) [0x00007FF6294B1743]
+	GetHandleVerifier [0x00007FF6299D436D+3525677]
+	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
+	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
+	GetHandleVerifier [0x00007FF629747C0A+853194]
+	(No symbol) [0x00007FF6295E990F]
+	(No symbol) [0x00007FF6295E5674]
+	(No symbol) [0x00007FF6295E5816]
+	(No symbol) [0x00007FF6295D4D89]
+	BaseThreadInitThunk [0x00007FFCB2907374+20]
+	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+
+2025-03-18 18:08:46,102 - INFO - Scraped caption: 'You can find us this week at Barley Naked Brewing Company this Saturday for #stpatricksday !🌈🍀'
+2025-03-18 18:08:46,916 - INFO - Generated Gemini comment: Sounds like a fun time! ☘️
+2025-03-18 18:08:47,039 - INFO - Post liked successfully
+2025-03-18 18:08:50,254 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF62967DF85+26693]
+	(No symbol) [0x00007FF6295DEAD0]
+	(No symbol) [0x00007FF6294691CA]
+	(No symbol) [0x00007FF629470B2C]
+	(No symbol) [0x00007FF6294738FC]
+	(No symbol) [0x00007FF6294739CF]
+	(No symbol) [0x00007FF6294B9065]
+	(No symbol) [0x00007FF6294B707C]
+	(No symbol) [0x00007FF6294E78EA]
+	(No symbol) [0x00007FF6294B2096]
+	(No symbol) [0x00007FF6294E7B00]
+	(No symbol) [0x00007FF6295100B8]
+	(No symbol) [0x00007FF6294E76C3]
+	(No symbol) [0x00007FF6294B0490]
+	(No symbol) [0x00007FF6294B1743]
+	GetHandleVerifier [0x00007FF6299D436D+3525677]
+	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
+	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
+	GetHandleVerifier [0x00007FF629747C0A+853194]
+	(No symbol) [0x00007FF6295E990F]
+	(No symbol) [0x00007FF6295E5674]
+	(No symbol) [0x00007FF6295E5816]
+	(No symbol) [0x00007FF6295D4D89]
+	BaseThreadInitThunk [0x00007FFCB2907374+20]
+	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+
+2025-03-18 18:09:01,835 - INFO - Comment posted successfully: Sounds like a fun time! ☘️
+2025-03-18 18:09:01,835 - INFO - Successfully processed post 4/4
+2025-03-18 18:09:01,836 - INFO - Completed 4 out of 4 requested interactions
+2025-03-18 18:09:04,256 - INFO - Browser closed successfully
