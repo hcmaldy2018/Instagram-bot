@@ -104,13 +104,11 @@ def parse_arguments():
 def setup_gemini():
     """Initialize Gemini API with your API key"""
     try:
-        log_activity("Attempting to initialize Gemini API...")
         genai.configure(api_key="AIzaSyC-rDK4kRtXgZoTraV1M4HU7CjGf_BQs-c")
         model = genai.GenerativeModel('gemini-1.5-pro-latest')
-        log_activity("Gemini API initialized successfully")
         return model
     except Exception as e:
-        log_activity(f"Failed to initialize Gemini: {str(e)}")
+        log_activity(f"Failed to initialize Gemini: {e}")
         return None
 
 def generate_comment(caption="", used_comments=None):
@@ -119,15 +117,12 @@ def generate_comment(caption="", used_comments=None):
         used_comments = set()
     
     if not caption or caption == "No caption found":
-        log_activity("No caption provided, using fallback comment")
         return generate_fallback_comment()
 
     try:
         # Try to use Gemini for comment generation
-        log_activity("Attempting to generate comment using Gemini...")
         model = setup_gemini()
         if model:
-            log_activity("Gemini model initialized, generating comment...")
             prompt = f"""
             Generate a short, genuine Instagram comment for this post. 
             The comment should be positive and appreciative, but not overpromising or requiring a response.
@@ -145,16 +140,11 @@ def generate_comment(caption="", used_comments=None):
             - Focus on appreciation or admiration
             - No hashtags unless they're perfectly contextual
             
-            For insightful/meaningful posts:
-            - Add a personal touch or reflection
-            - Show understanding of the message
-            - Use more thoughtful language
-            - Examples: "This really resonates with me ✨", "Such a powerful perspective 🌟"
-            
-            For simple posts (food, basic photos):
-            - Keep it light and casual
-            - Use simpler language
-            - Examples: "Looks amazing! 😋", "Beautiful shot! 📸"
+            Examples of good comments:
+            - "Beautiful capture! 📸"
+            - "Love the vibes ✨"
+            - "This is stunning! 🌟"
+            - "Perfect moment 🙌"
             
             Examples to avoid:
             - "DM me for collab"
@@ -167,13 +157,11 @@ def generate_comment(caption="", used_comments=None):
             
             response = model.generate_content(prompt)
             comment = response.text.strip()
-            log_activity(f"Received response from Gemini: {comment}")
             
             # Clean and validate the comment
             comment = clean_text(comment)
             if len(comment) > 50:  # Reduced maximum length
                 comment = comment[:47] + "..."
-                log_activity(f"Truncated comment to: {comment}")
             
             # Additional validation to avoid unwanted patterns
             lower_comment = comment.lower()
@@ -181,20 +169,16 @@ def generate_comment(caption="", used_comments=None):
                 "dm", "follow", "check", "visit", "where", "when", "how", "?", 
                 "collab", "message", "contact", "www", "http", "@", "link"
             ]):
-                log_activity("Comment contained unwanted patterns, using fallback")
                 return generate_fallback_comment()
             
             # Check if comment is unique
             if comment.lower() not in used_comments:
                 used_comments.add(comment.lower())
-                log_activity(f"Successfully generated unique Gemini comment: {comment}")
+                log_activity(f"Generated Gemini comment: {comment}")
                 return comment
-            else:
-                log_activity("Generated comment was already used, trying again")
             
     except Exception as e:
-        log_activity(f"Gemini comment generation failed: {str(e)}")
-        log_activity("Stacktrace: " + traceback.format_exc())
+        log_activity(f"Gemini comment generation failed: {e}")
     
     # Fallback to template-based system if Gemini fails
     log_activity("Falling back to template-based comment generation")
@@ -229,11 +213,6 @@ def generate_comment(caption="", used_comments=None):
             "Amazing work! 💪", "Looking strong! 🔥", "Incredible! ✨",
             "Pure strength! 💫", "Powerful! 💪", "Inspiring! 🌟"
         ],
-        'insightful': [
-            "This really resonates with me ✨", "Such a powerful perspective 🌟",
-            "Beautifully expressed 💫", "This speaks volumes ✨",
-            "So meaningful and true 🌟", "This hits deep 💫"
-        ],
         'generic': [
             "Love this! ✨", "Beautiful! 🌟", "Perfect! 💫", 
             "Amazing! 🙌", "Stunning! ✨", "Fantastic! 🌟"
@@ -248,31 +227,22 @@ def generate_comment(caption="", used_comments=None):
         'lifestyle': ['lifestyle', 'life', 'style', 'fashion', 'outfit', 'ootd', 'mood', 'vibes'],
         'art': ['art', 'artist', 'creative', 'design', 'drawing', 'painting', 'sketch', 'artwork'],
         'travel': ['travel', 'trip', 'journey', 'adventure', 'explore', 'wanderlust', 'vacation', 'holiday'],
-        'fitness': ['fitness', 'workout', 'gym', 'exercise', 'training', 'health', 'fit', 'strong'],
-        'insightful': ['inspire', 'motivation', 'wisdom', 'truth', 'life', 'journey', 'growth', 'mindset', 'believe', 'dream', 'hope', 'faith', 'love', 'peace', 'happiness', 'success', 'change', 'transform', 'heal', 'learn', 'grow']
+        'fitness': ['fitness', 'workout', 'gym', 'exercise', 'training', 'health', 'fit', 'strong']
     }
     
     # Detect content type from caption and hashtags
     content_scores = {ctype: 0 for ctype in content_types.keys()}
     
     # Check words in caption
-    caption_lower = caption.lower()
-    for word in caption_lower.split():
+    for word in caption.split():
         for ctype, keywords in content_types.items():
             if word in keywords:
                 content_scores[ctype] += 1
     
-    # Check for insightful content
-    insightful_keywords = content_types['insightful']
-    insightful_score = sum(1 for word in insightful_keywords if word in caption_lower)
-    
-    # Select content type with highest score
+    # Select content type with highest score, default to generic
     max_score = max(content_scores.values())
     if max_score > 0:
         content_type = max(content_scores.items(), key=lambda x: x[1])[0]
-        # If it's an insightful post, use insightful templates
-        if insightful_score >= 2:  # If we find 2 or more insightful keywords
-            content_type = 'insightful'
     else:
         content_type = 'generic'
     
@@ -554,13 +524,13 @@ def scroll_to_next_post(driver, current_post_index):
         # Click on a neutral area and scroll away from current post
         driver.execute_script("""
             document.activeElement.blur();
-            window.scrollBy(0, 800);
+            window.scrollBy(0, 400);
         """)
-        time.sleep(3)
+        time.sleep(2)
         
         # Press Escape key to exit any potential overlays or popups
         ActionChains(driver).send_keys(Keys.ESCAPE).perform()
-        time.sleep(2)
+        time.sleep(1)
     except Exception as e:
         log_activity(f"Warning during context exit: {e}")
     
@@ -576,36 +546,36 @@ def scroll_to_next_post(driver, current_post_index):
                 next_post_url = next_post.find_element(By.XPATH, ".//a[contains(@href, '/p/')]").get_attribute("href")
                 if current_post_url and next_post_url == current_post_url:
                     log_activity("Still on same post, scrolling more...")
-                    driver.execute_script("window.scrollBy(0, 1000);")
-                    time.sleep(4)
+                    driver.execute_script("window.scrollBy(0, 800);")
+                    time.sleep(3)
                     continue
             except:
                 pass
             
-            # Scroll to next post with improved positioning
+            # Scroll to next post
             driver.execute_script("""
                 arguments[0].scrollIntoView({
                     behavior: 'smooth',
                     block: 'center'
                 });
-                window.scrollBy(0, -200);
+                window.scrollBy(0, -100);
             """, next_post)
-            time.sleep(4)
+            time.sleep(3)
             
             # Verify the post is visible and we can interact with it
             if next_post.is_displayed():
                 # Double check we're not on a sponsored post
                 if is_sponsored_post(driver, current_post_index + 1):
                     log_activity("Next post is sponsored, scrolling more...")
-                    driver.execute_script("window.scrollBy(0, 1000);")
-                    time.sleep(4)
+                    driver.execute_script("window.scrollBy(0, 800);")
+                    time.sleep(3)
                     continue
                     
                 return True
         except:
             log_activity(f"Attempt {attempt + 1} to find next post failed, scrolling to load more...")
-            driver.execute_script("window.scrollBy(0, 1000);")
-            time.sleep(4)
+            driver.execute_script("window.scrollBy(0, 800);")
+            time.sleep(3)
     
     log_activity("Failed to find next post after multiple attempts")
     return False
@@ -656,48 +626,37 @@ def post_comment(driver, post_index, comment):
     
     return False
 
-def verify_post_match(driver, post_index):
-    """Simple verification that post is present and visible"""
+def verify_post_match(driver, post_index, original_url=None):
+    """Simplified post verification"""
     try:
+        # Verify post is present and visible
         post = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.XPATH, f"(//article)[{post_index}]"))
         )
         
-        return post.is_displayed()
+        if not post.is_displayed():
+            log_activity("Post not visible")
+            return False
+            
+        # If we have an original URL, verify it matches
+        if original_url:
+            try:
+                current_url = post.find_element(By.XPATH, ".//a[contains(@href, '/p/')]").get_attribute("href")
+                if current_url and current_url != original_url:
+                    log_activity("Post URL changed")
+                    return False
+            except:
+                pass
+        
+        return True
     except Exception as e:
         log_technical(f"Post verification error: {e}")
         return False
 
-def normalize_caption(caption):
-    """Normalize caption for comparison by removing extra whitespace and truncating"""
-    if not caption:
-        return ""
-    # Remove extra whitespace and newlines
-    normalized = " ".join(caption.split())
-    # Take first 50 chars for comparison to avoid issues with dynamic loading
-    return normalized[:50]
-
-def process_post(driver, post, post_index, used_comments, is_local_account=False):
+def process_post(driver, post, post_index, used_comments, processed_posts, is_local_account=False):
     """Process a single post"""
     try:
-        # Initial centering and stability check with improved positioning
-        driver.execute_script("""
-            arguments[0].scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-            window.scrollBy(0, -200);
-        """, post)
-        time.sleep(3)
-        
-        # Clear any potential overlays
-        try:
-            ActionChains(driver).send_keys(Keys.ESCAPE).perform()
-            time.sleep(1)
-        except:
-            pass
-        
-        # Check if post is already liked
+        # Check if post is already liked first
         try:
             like_button = WebDriverWait(driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, 
@@ -711,17 +670,42 @@ def process_post(driver, post, post_index, used_comments, is_local_account=False
             log_technical(f"Error checking like status: {e}")
             return False
 
-        # Check if post is sponsored
+        # Check if post is sponsored first, before any other processing
+        try:
+            sponsored_text = post.find_element(By.XPATH, ".//span[contains(text(), 'Sponsored')]")
+            if sponsored_text and sponsored_text.is_displayed():
+                log_activity("Found sponsored post (Sponsored text under account name)")
+                log_activity("Skipping sponsored post")
+                return False
+        except:
+            pass  # Not a sponsored post, continue processing
+
+        # Get post URL for logging and verification
+        try:
+            post_link = post.find_element(By.XPATH, ".//a[contains(@href, '/p/')]")
+            post_url = post_link.get_attribute('href')
+            log_activity(f"Processing post URL: {post_url}")
+        except:
+            log_activity("Could not get post URL")
+            post_url = None
+
+        # Check for sponsored content first
         if is_sponsored_post(driver, post_index):
             log_activity("Skipping sponsored post")
             return False
-
+        
         # Check engagement levels for local account mode
         if not check_engagement_levels(driver, is_local_account):
             log_activity("Skipping post due to high engagement")
             return False
         
-        # Get caption and generate comment
+        # Get post identifier
+        post_id = get_post_identifier(driver, post)
+        if post_id in processed_posts:
+            log_activity("Already processed this post")
+            return False
+        
+        # Get caption
         caption = get_caption(driver, post, post_index)
         if caption == "No caption found":
             log_activity("No caption found")
@@ -733,14 +717,15 @@ def process_post(driver, post, post_index, used_comments, is_local_account=False
             log_activity("Failed to generate comment")
             return False
         
-        # Like the post
+        # Like and comment
         try:
-            # Get fresh reference to post and like button
-            post = WebDriverWait(driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, f"(//article)[{post_index}]"))
-            )
-            
-            like_button = WebDriverWait(driver, 3).until(
+            # Verify we're still on the same post before interacting
+            if not verify_post_match(driver, post_index, post_url):
+                log_activity("Post changed during processing, skipping...")
+                return False
+
+            # Like the post
+            like_button = WebDriverWait(driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, 
                     f"(//article)[{post_index}]//div[contains(@class, 'x1i10hfl') and .//*[name()='svg' and @aria-label='Like']]"
                 ))
@@ -752,8 +737,15 @@ def process_post(driver, post, post_index, used_comments, is_local_account=False
                 log_activity("Post liked successfully")
                 time.sleep(2)
             
+            # Verify again before commenting
+            if not verify_post_match(driver, post_index, post_url):
+                log_activity("Post changed after liking, skipping comment...")
+                return False
+            
             # Post comment
             if post_comment(driver, post_index, comment):
+                if post_id:
+                    processed_posts.add(post_id)
                 return True
             else:
                 log_activity("Failed to post comment")
@@ -825,33 +817,29 @@ def handle_popups(driver):
 def login_to_instagram(driver, username, password):
     """Handle login and initial popups"""
     try:
-        # Find and fill username field with fast typing
-        username_field = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "username")))
+        # Find and fill username field
+        username_field = WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.NAME, "username")))
         username_field.clear()
-        for char in username:
-            username_field.send_keys(char)
-            time.sleep(random.uniform(0.02, 0.05))  # Faster typing
+        username_field.send_keys(username)
         log_activity("Entered username")
         
-        # Find and fill password field with fast typing
-        password_field = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "password")))
+        # Find and fill password field
+        password_field = WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.NAME, "password")))
         password_field.clear()
-        for char in password:
-            password_field.send_keys(char)
-            time.sleep(random.uniform(0.02, 0.05))  # Faster typing
+        password_field.send_keys(password)
         log_activity("Entered password")
         
         # Submit login
         password_field.send_keys(Keys.RETURN)
         log_activity("Login attempt submitted, waiting for response...")
-        time.sleep(5)  # Reduced from 10 to 5 seconds
+        time.sleep(10)  # Wait for login to complete
         
         # Handle pop-ups with improved stability
         max_attempts = 20
         for attempt in range(max_attempts):
             try:
                 # Updated selectors to handle Meta login info popup and other popups
-                pop_up_button = WebDriverWait(driver, 5).until(
+                pop_up_button = WebDriverWait(driver, 10).until(
                     EC.element_to_be_clickable((By.XPATH, 
                         "//div[@role='button' and contains(text(), 'Not now')] | " +
                         "//button[text()='Not Now'] | " +
@@ -860,10 +848,10 @@ def login_to_instagram(driver, username, password):
                         "//div[contains(@class, 'x1i10hfl')]//div[text()='Not now']"
                     ))
                 )
-                time.sleep(1)  # Reduced from 2 to 1
+                time.sleep(2)  # Brief pause before clicking
                 driver.execute_script("arguments[0].click();", pop_up_button)
                 log_activity(f"Attempt {attempt + 1}: Clicked 'Not now' button")
-                time.sleep(1)  # Reduced from 2 to 1
+                time.sleep(2)
                 
                 # Verify if popup was dismissed
                 try:
@@ -878,7 +866,7 @@ def login_to_instagram(driver, username, password):
                 log_activity(f"Attempt {attempt + 1} failed: {str(e)}")
                 if attempt == max_attempts - 1:
                     log_activity("Failed to handle popups after maximum attempts")
-                    break
+                    break  # Changed from return False to break to still try Meta popup click
         
         # Always try to click outside to dismiss Meta popup
         try:
@@ -886,14 +874,14 @@ def login_to_instagram(driver, username, password):
             action.move_by_offset(1, 1).click().perform()
             log_activity("Clicked to dismiss Meta popup")
             action.move_by_offset(-1, -1).perform()  # Reset mouse position
-            time.sleep(1)  # Reduced from 2 to 1
+            time.sleep(2)
         except:
             log_activity("Could not click to dismiss Meta popup")
         
         # Verify we reached the feed
         try:
             # Wait for either the Instagram logo or an article to appear
-            WebDriverWait(driver, 20).until(
+            WebDriverWait(driver, 30).until(
                 EC.presence_of_element_located((
                     By.XPATH,
                     "//*[contains(@aria-label, 'Instagram')] | //article | //div[@role='feed']"
@@ -920,7 +908,8 @@ def main():
         args = parse_arguments()
         log_activity(f"Starting bot with username: {args.username}")
         
-        # Initialize used comments set
+        # Initialize processed posts set
+        processed_posts = set()
         used_comments = set()
         
         # Convert local_account string to boolean
@@ -951,7 +940,7 @@ def main():
         driver.execute_script("Object.defineProperty(navigator, 'platform', {get: () => 'Win32'})")
         driver.get("https://www.instagram.com/")
         log_activity("Navigated to Instagram, waiting for page load...")
-        time.sleep(3)
+        time.sleep(5)
 
         try:
             log_activity("Attempting to log in...")
@@ -962,37 +951,10 @@ def main():
                 successful_interactions = 0
                 posts_checked = 0
                 max_attempts = args.interactions * 3
-                current_post_index = 1
                 
-                while successful_interactions < args.interactions:
-                    # If we've completed 3 interactions, refresh the page
-                    if successful_interactions > 0 and successful_interactions % 3 == 0:
-                        log_activity("Completed 3 interactions, refreshing page...")
-                        driver.refresh()
-                        time.sleep(5)  # Wait for page to load
-                        
-                        # Handle any popups after refresh
-                        try:
-                            ActionChains(driver).send_keys(Keys.ESCAPE).perform()
-                            time.sleep(1)
-                        except:
-                            pass
-                        
-                        # Verify we're still logged in
-                        try:
-                            WebDriverWait(driver, 10).until(
-                                EC.presence_of_element_located((By.XPATH, "//article | //div[@role='feed']"))
-                            )
-                            log_activity("Successfully refreshed and verified feed access")
-                            current_post_index = 1  # Reset post index after refresh
-                            time.sleep(2)  # Additional wait after refresh
-                        except:
-                            log_activity("Feed not found after refresh, attempting to log in again...")
-                            if not login_to_instagram(driver, args.username, args.password):
-                                log_activity("Failed to log in after refresh")
-                                break
-                    
+                while successful_interactions < args.interactions and posts_checked < max_attempts:
                     posts_checked += 1
+                    current_post_index = posts_checked
                     
                     try:
                         # Try to find the current post
@@ -1000,44 +962,32 @@ def main():
                             EC.presence_of_element_located((By.XPATH, f"(//article)[{current_post_index}]"))
                         )
                         
+                        # Ensure post is in view with reduced scroll offset
+                        driver.execute_script("""
+                            arguments[0].scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center'
+                            });
+                            window.scrollBy(0, -25);
+                        """, post)
+                        time.sleep(2)
+                        
                         # Process the post
-                        if process_post(driver, post, current_post_index, used_comments, is_local_account):
+                        if process_post(driver, post, current_post_index, used_comments, processed_posts, is_local_account):
                             successful_interactions += 1
                             log_activity(f"Successfully processed post {successful_interactions}/{args.interactions}")
-                            
-                            # Move to next post
-                            current_post_index += 1
-                            driver.execute_script("window.scrollBy(0, 400);")
-                            time.sleep(2)
-                            
-                            # Clear any potential overlays or popups
-                            try:
-                                ActionChains(driver).send_keys(Keys.ESCAPE).perform()
-                                time.sleep(0.5)
-                            except:
-                                pass
                         else:
                             log_activity(f"Skipped or failed to process post {current_post_index}")
-                            current_post_index += 1
-                            driver.execute_script("window.scrollBy(0, 200);")
-                            time.sleep(1)
+                        
+                        # Move to next post with reduced scroll
+                        if successful_interactions < args.interactions:
+                            driver.execute_script("window.scrollBy(0, 150);")
+                            time.sleep(2)
                             
                     except Exception as e:
                         log_activity(f"Error processing post: {e}")
-                        current_post_index += 1
-                        driver.execute_script("window.scrollBy(0, 200);")
+                        driver.execute_script("window.scrollBy(0, 150);")
                         time.sleep(2)
-                        
-                        try:
-                            ActionChains(driver).send_keys(Keys.ESCAPE).perform()
-                            time.sleep(0.5)
-                        except:
-                            pass
-                    
-                    # Break if we've exceeded max attempts
-                    if posts_checked >= max_attempts:
-                        log_activity("Reached maximum attempts limit")
-                        break
                 
                 log_activity(f"Completed {successful_interactions} out of {args.interactions} requested interactions")
             else:

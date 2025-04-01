@@ -1,206 +1,599 @@
-2025-03-18 18:06:51,093 - INFO - Log file created: bot_log.txt
-2025-03-18 18:06:51,093 - INFO - Starting bot with username: admin@romerolocksley.com
-2025-03-18 18:06:51,093 - INFO - Initializing browser...
-2025-03-18 18:06:52,986 - INFO - Browser initialized successfully.
-2025-03-18 18:06:56,280 - INFO - Navigated to Instagram, waiting for page load...
-2025-03-18 18:07:03,296 - INFO - Attempting to log in...
-2025-03-18 18:07:03,556 - INFO - Entered username
-2025-03-18 18:07:03,741 - INFO - Entered password
-2025-03-18 18:07:03,796 - INFO - Login attempt submitted, waiting for response...
-2025-03-18 18:07:19,009 - INFO - No Save Login Info page found or already handled
-2025-03-18 18:07:21,304 - INFO - Clicked top-left corner to dismiss Meta popup
-2025-03-18 18:07:23,572 - INFO - Performing initial scroll to load posts...
-2025-03-18 18:07:30,624 - INFO - Successfully reached Instagram feed!
-2025-03-18 18:07:30,624 - INFO - Starting to process posts...
-2025-03-18 18:07:32,705 - INFO - Processing post URL: https://www.instagram.com/p/DHWBzaNSp-6/
-2025-03-18 18:07:33,919 - INFO - Clicked 'more' button to reveal full caption
-2025-03-18 18:07:35,950 - INFO - Scraped caption: 'Fresh New Finds at the Fredericksburg Food Coop!
+2025-03-30 22:42:05,924 - INFO - Log file created: bot_log.txt
+2025-03-30 22:42:05,927 - INFO - Starting bot with username: joseluistreeserviceinc
+2025-03-30 22:42:05,927 - INFO - Initializing browser...
+2025-03-30 22:42:07,427 - INFO - Browser initialized successfully.
+2025-03-30 22:42:11,900 - INFO - Navigated to Instagram, waiting for page load...
+2025-03-30 22:42:14,913 - INFO - Attempting to log in...
+2025-03-30 22:42:16,673 - INFO - Entered username
+2025-03-30 22:42:17,478 - INFO - Entered password
+2025-03-30 22:42:17,515 - INFO - Login attempt submitted, waiting for response...
+2025-03-30 22:42:32,767 - INFO - Attempt 1: Clicked 'Not now' button
+2025-03-30 22:42:33,795 - INFO - Popup dismissed successfully
+2025-03-30 22:42:34,176 - INFO - Clicked to dismiss Meta popup
+2025-03-30 22:42:35,458 - INFO - Successfully reached Instagram feed!
+2025-03-30 22:42:35,459 - INFO - Starting to process posts...
+2025-03-30 22:42:40,605 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:42:42,641 - INFO - Scraped caption: 'Oh yeah!!!! Sunday means BRUNCH AT BILLIKENS
 
-We’ve just stocked up on some exciting new products you’ll love:
-👉 Wildvine Banh Mi Medley – Vietnamese Spiced Pickled Veggies $6.99
-👉 Nut Puds Almond + Coconut Coffee Cake Creamer – Dairy-Free & Unsweetened $5.99
-👉 Lifeway Organic Low Fat Plain Kefir – Refreshing & Probiotic-Rich $5.99
-👉 Little Sesame Green Goddess Hummus – Seasonal & Flavorful $5.79
-
-Come in today and try these delicious additions before they’re gone!'
-2025-03-18 18:07:37,009 - INFO - Generated Gemini comment: Love these new additions! 
-2025-03-18 18:07:37,096 - INFO - Post liked successfully
-2025-03-18 18:07:40,251 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=134.0.6998.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Our special brunch menu is available from 11am to 2pm every Sunday...and what an amazing weather day for it today!'
+2025-03-30 22:42:42,641 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:42:42,642 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:42:42,642 - INFO - Gemini API initialized successfully
+2025-03-30 22:42:42,642 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:42:43,911 - INFO - Received response from Gemini: Brunch at Billikens sounds perfect! ☀️
+2025-03-30 22:42:43,911 - INFO - Successfully generated unique Gemini comment: Brunch at Billikens sounds perfect! ☀️
+2025-03-30 22:42:43,956 - INFO - Post liked successfully
+2025-03-30 22:42:47,074 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF62967DF85+26693]
-	(No symbol) [0x00007FF6295DEAD0]
-	(No symbol) [0x00007FF6294691CA]
-	(No symbol) [0x00007FF629470B2C]
-	(No symbol) [0x00007FF6294738FC]
-	(No symbol) [0x00007FF6294739CF]
-	(No symbol) [0x00007FF6294B9065]
-	(No symbol) [0x00007FF6294B707C]
-	(No symbol) [0x00007FF6294E78EA]
-	(No symbol) [0x00007FF6294B2096]
-	(No symbol) [0x00007FF6294E7B00]
-	(No symbol) [0x00007FF6295100B8]
-	(No symbol) [0x00007FF6294E76C3]
-	(No symbol) [0x00007FF6294B0490]
-	(No symbol) [0x00007FF6294B1743]
-	GetHandleVerifier [0x00007FF6299D436D+3525677]
-	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
-	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
-	GetHandleVerifier [0x00007FF629747C0A+853194]
-	(No symbol) [0x00007FF6295E990F]
-	(No symbol) [0x00007FF6295E5674]
-	(No symbol) [0x00007FF6295E5816]
-	(No symbol) [0x00007FF6295D4D89]
-	BaseThreadInitThunk [0x00007FFCB2907374+20]
-	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
 
-2025-03-18 18:07:51,326 - INFO - Comment posted successfully: Love these new additions! 
-2025-03-18 18:07:51,326 - INFO - Successfully processed post 1/4
-2025-03-18 18:07:55,419 - INFO - Processing post URL: https://www.instagram.com/p/DHVyxMbxZk4/
-2025-03-18 18:07:56,574 - INFO - Clicked 'more' button to reveal full caption
-2025-03-18 18:07:58,629 - INFO - Scraped caption: 'To help our residents celebrate National Wear a Hat Day we are holding an in-person raffle where we’ll be giving away two @fxbgnats hats!
-
-If interested in joining in on the fun and supporting our neighborhood baseball team during the 2025 season, stop by the Club House to fill out a sign-up slip and drop it in the box provided! Our winners will be announced on Tuesday, March 25th!
-
-Please note, one entry per person.
-
-#SilverLifeStyle #SilverCollection #LuxuryLiving #LuxuryApartments #LoveWhereYouLive #LoveWhereYouWork #LoveWhereYouPlay #WeLoveOurResidents #ResidentEvents #ResidentEvent #fxbg #fxbgchamber #goodnewsfxbg #silverlining #residentraffle #smallbusiness'
-2025-03-18 18:07:59,356 - INFO - Generated Gemini comment: Love this idea! 
-2025-03-18 18:07:59,436 - INFO - Post liked successfully
-2025-03-18 18:08:02,607 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=134.0.6998.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+2025-03-30 22:43:00,072 - INFO - Comment posted successfully: Brunch at Billikens sounds perfect! ☀️
+2025-03-30 22:43:00,072 - INFO - Successfully processed post 1/15
+2025-03-30 22:43:11,850 - INFO - No 'more' button found or not clickable: Message: 
 Stacktrace:
-	GetHandleVerifier [0x00007FF62967DF85+26693]
-	(No symbol) [0x00007FF6295DEAD0]
-	(No symbol) [0x00007FF6294691CA]
-	(No symbol) [0x00007FF629470B2C]
-	(No symbol) [0x00007FF6294738FC]
-	(No symbol) [0x00007FF6294739CF]
-	(No symbol) [0x00007FF6294B9065]
-	(No symbol) [0x00007FF6294B707C]
-	(No symbol) [0x00007FF6294E78EA]
-	(No symbol) [0x00007FF6294B2096]
-	(No symbol) [0x00007FF6294E7B00]
-	(No symbol) [0x00007FF6295100B8]
-	(No symbol) [0x00007FF6294E76C3]
-	(No symbol) [0x00007FF6294B0490]
-	(No symbol) [0x00007FF6294B1743]
-	GetHandleVerifier [0x00007FF6299D436D+3525677]
-	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
-	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
-	GetHandleVerifier [0x00007FF629747C0A+853194]
-	(No symbol) [0x00007FF6295E990F]
-	(No symbol) [0x00007FF6295E5674]
-	(No symbol) [0x00007FF6295E5816]
-	(No symbol) [0x00007FF6295D4D89]
-	BaseThreadInitThunk [0x00007FFCB2907374+20]
-	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCACF747]
+	(No symbol) [0x00007FF6DCACF97C]
+	(No symbol) [0x00007FF6DCB233C7]
+	(No symbol) [0x00007FF6DCAF792F]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
 
-2025-03-18 18:08:12,185 - INFO - Comment posted successfully: Love this idea! 
-2025-03-18 18:08:12,185 - INFO - Successfully processed post 2/4
-2025-03-18 18:08:16,297 - INFO - Found sponsored post (Sponsored text under account name)
-2025-03-18 18:08:16,297 - INFO - Skipping sponsored post
-2025-03-18 18:08:16,297 - INFO - Skipped or failed to process post 3
-2025-03-18 18:08:20,418 - INFO - Processing post URL: https://www.instagram.com/p/DHEswKBxaVa/
-2025-03-18 18:08:21,576 - INFO - Clicked 'more' button to reveal full caption
-2025-03-18 18:08:23,631 - INFO - Scraped caption: '💼 Smart business owners and entrepreneurs know that success isn't about doing everything – it's about focusing on what matters most.
-
-When it comes to accounting and bookkeeping, you can trust us to handle the details while you focus on growing your business. ✅ What tasks are you ready to delegate?
-
-📊 We're here to help—virtually and in person. Contact us today!
-
-#PatriotsTaxAccounting #PatriotsTaxBookkeeping #Tax #TaxPros #TaxExperts #TaxPlanning #TaxTips #TaxSeason #Accounting #AccountingServices #AccountingSolutions #Bookkeeping #BookkeepingServices #Bookkeeper #SmallBusiness #SmallBusinesses #SmallBusinessSupport #TrustedAdvisors #FredericksburgVA #Virginia #VA #Fredericksburg #FXBG #FXBGVA #Katy #KatyTX #Texas'
-2025-03-18 18:08:24,306 - INFO - Generated Gemini comment: Great advice! 
-2025-03-18 18:08:24,440 - INFO - Post liked successfully
-2025-03-18 18:08:27,614 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=134.0.6998.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+2025-03-30 22:43:11,874 - INFO - Scraped caption: 'A spritz with a view? We’ll take it 🙂‍↕️🌇🍾'
+2025-03-30 22:43:11,874 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:43:11,874 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:43:11,875 - INFO - Gemini API initialized successfully
+2025-03-30 22:43:11,875 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:43:12,634 - INFO - Received response from Gemini: Cheers to that! 🥂🌇
+2025-03-30 22:43:12,635 - INFO - Successfully generated unique Gemini comment: Cheers to that! 
+2025-03-30 22:43:12,677 - INFO - Post liked successfully
+2025-03-30 22:43:15,789 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF62967DF85+26693]
-	(No symbol) [0x00007FF6295DEAD0]
-	(No symbol) [0x00007FF6294691CA]
-	(No symbol) [0x00007FF629470B2C]
-	(No symbol) [0x00007FF6294738FC]
-	(No symbol) [0x00007FF6294739CF]
-	(No symbol) [0x00007FF6294B9065]
-	(No symbol) [0x00007FF6294B707C]
-	(No symbol) [0x00007FF6294E78EA]
-	(No symbol) [0x00007FF6294B2096]
-	(No symbol) [0x00007FF6294E7B00]
-	(No symbol) [0x00007FF6295100B8]
-	(No symbol) [0x00007FF6294E76C3]
-	(No symbol) [0x00007FF6294B0490]
-	(No symbol) [0x00007FF6294B1743]
-	GetHandleVerifier [0x00007FF6299D436D+3525677]
-	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
-	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
-	GetHandleVerifier [0x00007FF629747C0A+853194]
-	(No symbol) [0x00007FF6295E990F]
-	(No symbol) [0x00007FF6295E5674]
-	(No symbol) [0x00007FF6295E5816]
-	(No symbol) [0x00007FF6295D4D89]
-	BaseThreadInitThunk [0x00007FFCB2907374+20]
-	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
 
-2025-03-18 18:08:36,638 - INFO - Comment posted successfully: Great advice! 
-2025-03-18 18:08:36,638 - INFO - Successfully processed post 3/4
-2025-03-18 18:08:40,805 - INFO - Processing post URL: https://www.instagram.com/p/DHGTppxzgm_/
-2025-03-18 18:08:46,074 - INFO - No 'more' button found or not clickable: Message: 
+2025-03-30 22:43:25,354 - INFO - Comment posted successfully: Cheers to that! 
+2025-03-30 22:43:25,354 - INFO - Successfully processed post 2/15
+2025-03-30 22:43:33,011 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:43:35,049 - INFO - Scraped caption: 'Sunday called—it said you deserve better than light beer. 🥃
+Kick back with an Old Fashioned at Rebellion.
+Strong, smooth, and exactly the vibe.'
+2025-03-30 22:43:35,049 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:43:35,049 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:43:35,050 - INFO - Gemini API initialized successfully
+2025-03-30 22:43:35,050 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:43:35,811 - INFO - Received response from Gemini: Love that vibe! Cheers 🥃
+2025-03-30 22:43:35,811 - INFO - Successfully generated unique Gemini comment: Love that vibe! Cheers 
+2025-03-30 22:43:35,853 - INFO - Post liked successfully
+2025-03-30 22:43:38,972 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF62967DF85+26693]
-	(No symbol) [0x00007FF6295DEAD0]
-	(No symbol) [0x00007FF6294691CA]
-	(No symbol) [0x00007FF6294BF747]
-	(No symbol) [0x00007FF6294BF97C]
-	(No symbol) [0x00007FF6295133C7]
-	(No symbol) [0x00007FF6294E792F]
-	(No symbol) [0x00007FF6295100B8]
-	(No symbol) [0x00007FF6294E76C3]
-	(No symbol) [0x00007FF6294B0490]
-	(No symbol) [0x00007FF6294B1743]
-	GetHandleVerifier [0x00007FF6299D436D+3525677]
-	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
-	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
-	GetHandleVerifier [0x00007FF629747C0A+853194]
-	(No symbol) [0x00007FF6295E990F]
-	(No symbol) [0x00007FF6295E5674]
-	(No symbol) [0x00007FF6295E5816]
-	(No symbol) [0x00007FF6295D4D89]
-	BaseThreadInitThunk [0x00007FFCB2907374+20]
-	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
 
-2025-03-18 18:08:46,102 - INFO - Scraped caption: 'You can find us this week at Barley Naked Brewing Company this Saturday for #stpatricksday !🌈🍀'
-2025-03-18 18:08:46,916 - INFO - Generated Gemini comment: Sounds like a fun time! ☘️
-2025-03-18 18:08:47,039 - INFO - Post liked successfully
-2025-03-18 18:08:50,254 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=134.0.6998.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+2025-03-30 22:43:49,489 - INFO - Comment posted successfully: Love that vibe! Cheers 
+2025-03-30 22:43:49,489 - INFO - Successfully processed post 3/15
+2025-03-30 22:43:52,020 - INFO - Completed 3 interactions, refreshing page...
+2025-03-30 22:44:00,907 - INFO - Successfully refreshed and verified feed access
+2025-03-30 22:44:08,076 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:44:10,117 - INFO - Scraped caption: 'In addition to the cupcakes, our client ordered macarons and dessert shooters. We are grateful for all returning clients, and @_itsromeshahid is no exception 🫶 Thank you for your support, always happy to service you and your family!
+
+📸Client pic'
+2025-03-30 22:44:10,117 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:44:10,118 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:44:10,118 - INFO - Gemini API initialized successfully
+2025-03-30 22:44:10,118 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:44:12,498 - INFO - Received response from Gemini: Those desserts look incredible! 😍
+2025-03-30 22:44:12,498 - INFO - Successfully generated unique Gemini comment: Those desserts look incredible! 
+2025-03-30 22:44:12,540 - INFO - Post liked successfully
+2025-03-30 22:44:15,715 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF62967DF85+26693]
-	(No symbol) [0x00007FF6295DEAD0]
-	(No symbol) [0x00007FF6294691CA]
-	(No symbol) [0x00007FF629470B2C]
-	(No symbol) [0x00007FF6294738FC]
-	(No symbol) [0x00007FF6294739CF]
-	(No symbol) [0x00007FF6294B9065]
-	(No symbol) [0x00007FF6294B707C]
-	(No symbol) [0x00007FF6294E78EA]
-	(No symbol) [0x00007FF6294B2096]
-	(No symbol) [0x00007FF6294E7B00]
-	(No symbol) [0x00007FF6295100B8]
-	(No symbol) [0x00007FF6294E76C3]
-	(No symbol) [0x00007FF6294B0490]
-	(No symbol) [0x00007FF6294B1743]
-	GetHandleVerifier [0x00007FF6299D436D+3525677]
-	GetHandleVerifier [0x00007FF6299E7F3B+3606523]
-	GetHandleVerifier [0x00007FF6299DCEE3+3561379]
-	GetHandleVerifier [0x00007FF629747C0A+853194]
-	(No symbol) [0x00007FF6295E990F]
-	(No symbol) [0x00007FF6295E5674]
-	(No symbol) [0x00007FF6295E5816]
-	(No symbol) [0x00007FF6295D4D89]
-	BaseThreadInitThunk [0x00007FFCB2907374+20]
-	RtlUserThreadStart [0x00007FFCB2BBCC91+33]
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
 
-2025-03-18 18:09:01,835 - INFO - Comment posted successfully: Sounds like a fun time! ☘️
-2025-03-18 18:09:01,835 - INFO - Successfully processed post 4/4
-2025-03-18 18:09:01,836 - INFO - Completed 4 out of 4 requested interactions
-2025-03-18 18:09:04,256 - INFO - Browser closed successfully
+2025-03-30 22:44:27,762 - INFO - Comment posted successfully: Those desserts look incredible! 
+2025-03-30 22:44:27,762 - INFO - Successfully processed post 4/15
+2025-03-30 22:44:35,393 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:44:37,420 - INFO - Scraped caption: 'Only a few days left to get your hands on the Grilled Cheese Burger—because sometimes one sandwich just isn’t enough.
+
+🥪🍔🧡🧀
+
+It’s gooey, beefy, and disappearing soon… like, real soon.'
+2025-03-30 22:44:37,420 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:44:37,420 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:44:37,421 - INFO - Gemini API initialized successfully
+2025-03-30 22:44:37,421 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:44:38,215 - INFO - Received response from Gemini: This looks incredible! 🤩
+2025-03-30 22:44:38,215 - INFO - Successfully generated unique Gemini comment: This looks incredible! 
+2025-03-30 22:44:38,263 - INFO - Post liked successfully
+2025-03-30 22:44:41,374 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
+
+2025-03-30 22:44:52,587 - INFO - Comment posted successfully: This looks incredible! 
+2025-03-30 22:44:52,587 - INFO - Successfully processed post 5/15
+2025-03-30 22:45:00,334 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:45:02,366 - INFO - Scraped caption: '🍝Spice up your pasta game with our new Giardiniera Chicken Pasta! 🔥 It’s a beautiful day to enjoy it! #sammytsfxbg #downtownfxbg'
+2025-03-30 22:45:02,366 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:45:02,366 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:45:02,366 - INFO - Gemini API initialized successfully
+2025-03-30 22:45:02,366 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:45:03,087 - INFO - Received response from Gemini: Looks delicious! 😋
+2025-03-30 22:45:03,088 - INFO - Successfully generated unique Gemini comment: Looks delicious! 
+2025-03-30 22:45:03,143 - INFO - Post liked successfully
+2025-03-30 22:45:06,265 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
+
+2025-03-30 22:45:16,002 - INFO - Comment posted successfully: Looks delicious! 
+2025-03-30 22:45:16,002 - INFO - Successfully processed post 6/15
+2025-03-30 22:45:18,533 - INFO - Completed 3 interactions, refreshing page...
+2025-03-30 22:45:26,921 - INFO - Successfully refreshed and verified feed access
+2025-03-30 22:45:34,077 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:45:36,139 - INFO - Scraped caption: 'Bridgerton theme cupcakes for a special birthday and baby shower💛💚
+
+Lemon cupcakes and vanilla bean buttercream'
+2025-03-30 22:45:36,139 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:45:36,139 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:45:36,139 - INFO - Gemini API initialized successfully
+2025-03-30 22:45:36,139 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:45:37,187 - INFO - Received response from Gemini: These are so cute! 😍
+2025-03-30 22:45:37,187 - INFO - Successfully generated unique Gemini comment: These are so cute! 
+2025-03-30 22:45:37,233 - INFO - Post liked successfully
+2025-03-30 22:45:40,361 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
+
+2025-03-30 22:45:50,272 - INFO - Comment posted successfully: These are so cute! 
+2025-03-30 22:45:50,272 - INFO - Successfully processed post 7/15
+2025-03-30 22:45:58,061 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:46:00,117 - INFO - Scraped caption: 'Car Washes Starting at $10 and now featuring our Graphene Extreme to give you that shine and protection your vehicle needs.
+
+Hand washes while you wait! No appointment needed. First come first serve.
+
+Have a wonderful weekend!
+.
+.
+.
+.
+.
+#cardetailing #autocare #fredericksburgcarwash #fredericksburgdetailing #fredericksburgdetailer #FredericksburgVA #fredericksburgcars #fredericksburg #spotsylvania #spotsylvaniaVA #spotsylvaniadetailing #spotsylvaniadetailer #spotsylvaniacarwash#spotsylvaniacars #dmv #dmvdetailing #dmvcarwash #dmvcars #dmvdetailer #vadetailing #vadetailer #vacars #vacarwash #fredericksburgauto #fredericksburglife #FredericksburgCommunity #visitfredericksburg #visitvirginia'
+2025-03-30 22:46:00,117 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:46:00,117 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:46:00,117 - INFO - Gemini API initialized successfully
+2025-03-30 22:46:00,117 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:46:00,969 - INFO - Received response from Gemini: Great deals and that shine ✨
+2025-03-30 22:46:00,969 - INFO - Successfully generated unique Gemini comment: Great deals and that shine ✨
+2025-03-30 22:46:01,013 - INFO - Post liked successfully
+2025-03-30 22:46:04,135 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
+
+2025-03-30 22:46:15,392 - INFO - Comment posted successfully: Great deals and that shine ✨
+2025-03-30 22:46:15,392 - INFO - Successfully processed post 8/15
+2025-03-30 22:46:27,162 - INFO - No 'more' button found or not clickable: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCACF747]
+	(No symbol) [0x00007FF6DCACF97C]
+	(No symbol) [0x00007FF6DCB233C7]
+	(No symbol) [0x00007FF6DCAF792F]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
+
+2025-03-30 22:46:27,186 - INFO - Scraped caption: 'The bar’s buzzing, the bourbon’s flowing—pull up a seat. ✨🥃'
+2025-03-30 22:46:27,186 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:46:27,186 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:46:27,187 - INFO - Gemini API initialized successfully
+2025-03-30 22:46:27,187 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:46:28,002 - INFO - Received response from Gemini: Sounds like a perfect evening! ✨
+2025-03-30 22:46:28,002 - INFO - Successfully generated unique Gemini comment: Sounds like a perfect evening! ✨
+2025-03-30 22:46:28,051 - INFO - Post liked successfully
+2025-03-30 22:46:31,165 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
+
+2025-03-30 22:46:43,286 - INFO - Comment posted successfully: Sounds like a perfect evening! ✨
+2025-03-30 22:46:43,286 - INFO - Successfully processed post 9/15
+2025-03-30 22:46:45,820 - INFO - Completed 3 interactions, refreshing page...
+2025-03-30 22:46:57,667 - INFO - Successfully refreshed and verified feed access
+2025-03-30 22:47:04,820 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:47:06,857 - INFO - Scraped caption: 'Ready to find your perfect home? Stop by for a tour at Alta Cosner and discover luxury living in Fredericksburg, VA—where comfort meets convenience! 🏡
+
+#AltaCosner #Tour #Apartments #FXBG #Fredericksburg #VA #LuxuryApartments #NewConstruction'
+2025-03-30 22:47:06,857 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:47:06,857 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:47:06,858 - INFO - Gemini API initialized successfully
+2025-03-30 22:47:06,858 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:47:08,717 - INFO - Received response from Gemini: Beautiful apartments! ✨
+2025-03-30 22:47:08,717 - INFO - Successfully generated unique Gemini comment: Beautiful apartments! ✨
+2025-03-30 22:47:08,762 - INFO - Post liked successfully
+2025-03-30 22:47:11,892 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
+
+2025-03-30 22:47:22,972 - INFO - Comment posted successfully: Beautiful apartments! ✨
+2025-03-30 22:47:22,973 - INFO - Successfully processed post 10/15
+2025-03-30 22:47:30,691 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:47:32,747 - INFO - Scraped caption: '🚗 Meal Plan Pick-Up Day is Here! 🍴
+
+Fresh, macro-friendly, and affordable meals are waiting for YOU at Clean Eatz
+
+✅ Perfectly portioned to fit your goals
+✅ Made fresh with high-quality ingredients
+✅ Affordable options for every budget
+
+No cooking, no cleaning—just grab, heat, and enjoy! Whether you’re fueling up for workouts or simplifying your week, we’ve got you covered.
+
+📍 Pick-Up Location: 5426 Southpoint Plaza Way
+Fredericksburg, VA 22407
+
+🕒 Pick-Up Hours: 11A-3P
+
+✨ Don’t miss out on delicious meals that make healthy eating simple!
+
+📦 Order now: www.cleaneatz.com/mealplanmenu
+
+#cleaneatzfredericksburg #itsalifestyle #wechangelivez #healthyandaffordable #nomnoms #weeklymealplan #healthyeating #mealprep #catering #localeats #SupportLocal #healthymeals #mealplanning #eatwell #freshmeals #easymeals #mealservice'
+2025-03-30 22:47:32,747 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:47:32,748 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:47:32,748 - INFO - Gemini API initialized successfully
+2025-03-30 22:47:32,748 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:47:33,616 - INFO - Received response from Gemini: Love this!  Makes healthy eating so easy! 🙌
+2025-03-30 22:47:33,616 - INFO - Successfully generated unique Gemini comment: Love this!  Makes healthy eating so easy! 
+2025-03-30 22:47:33,664 - INFO - Post liked successfully
+2025-03-30 22:47:36,793 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
+
+2025-03-30 22:47:50,594 - INFO - Comment posted successfully: Love this!  Makes healthy eating so easy! 
+2025-03-30 22:47:50,594 - INFO - Successfully processed post 11/15
+2025-03-30 22:47:57,213 - INFO - Found sponsored post (Sponsored text under account name)
+2025-03-30 22:47:57,214 - INFO - Skipping sponsored post
+2025-03-30 22:47:57,214 - INFO - Skipped or failed to process post 3
+2025-03-30 22:48:03,353 - INFO - Clicked 'more' button to reveal full caption
+2025-03-30 22:48:05,393 - INFO - Scraped caption: 'If Friday had a look, this would be it!😍
+
+Patio + delicious drinks + authentic Italian food = the perfect start to the weekend.
+
+Will see you soon? The patio awaits! 🥂
+
+#fxbg #fxbgva #patioseason'
+2025-03-30 22:48:05,393 - INFO - Attempting to generate comment using Gemini...
+2025-03-30 22:48:05,393 - INFO - Attempting to initialize Gemini API...
+2025-03-30 22:48:05,394 - INFO - Gemini API initialized successfully
+2025-03-30 22:48:05,394 - INFO - Gemini model initialized, generating comment...
+2025-03-30 22:48:06,260 - INFO - Received response from Gemini: Sounds like the perfect Friday! 😍
+2025-03-30 22:48:06,260 - INFO - Successfully generated unique Gemini comment: Sounds like the perfect Friday! 
+2025-03-30 22:48:06,303 - INFO - Post liked successfully
+2025-03-30 22:48:09,423 - INFO - Comment attempt 1 failed: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.178); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DCC8DF85+26693]
+	(No symbol) [0x00007FF6DCBEEAD0]
+	(No symbol) [0x00007FF6DCA791CA]
+	(No symbol) [0x00007FF6DCA80B2C]
+	(No symbol) [0x00007FF6DCA838FC]
+	(No symbol) [0x00007FF6DCA839CF]
+	(No symbol) [0x00007FF6DCAC9065]
+	(No symbol) [0x00007FF6DCAC707C]
+	(No symbol) [0x00007FF6DCAF78EA]
+	(No symbol) [0x00007FF6DCAC2096]
+	(No symbol) [0x00007FF6DCAF7B00]
+	(No symbol) [0x00007FF6DCB200B8]
+	(No symbol) [0x00007FF6DCAF76C3]
+	(No symbol) [0x00007FF6DCAC0490]
+	(No symbol) [0x00007FF6DCAC1743]
+	GetHandleVerifier [0x00007FF6DCFE436D+3525677]
+	GetHandleVerifier [0x00007FF6DCFF7F3B+3606523]
+	GetHandleVerifier [0x00007FF6DCFECEE3+3561379]
+	GetHandleVerifier [0x00007FF6DCD57C0A+853194]
+	(No symbol) [0x00007FF6DCBF990F]
+	(No symbol) [0x00007FF6DCBF5674]
+	(No symbol) [0x00007FF6DCBF5816]
+	(No symbol) [0x00007FF6DCBE4D89]
+	BaseThreadInitThunk [0x00007FFBDC157374+20]
+	RtlUserThreadStart [0x00007FFBDC91CC91+33]
+
+2025-03-30 22:48:21,696 - INFO - Comment posted successfully: Sounds like the perfect Friday! 
+2025-03-30 22:48:21,696 - INFO - Successfully processed post 12/15
+2025-03-30 22:48:24,231 - INFO - Completed 3 interactions, refreshing page...
